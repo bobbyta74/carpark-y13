@@ -1,3 +1,4 @@
+#CLI-only version of the car park app (not related to app.py)
 import sqlite3, time
 
 connection = sqlite3.connect("carpark.db")
