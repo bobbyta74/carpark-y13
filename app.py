@@ -1,4 +1,4 @@
-#Mr Cressey's carpark part 2 2:05
+#Mr Cressey's carpark part 3
 import flask, sqlite3, time
 
 #Startup - create 
@@ -21,7 +21,7 @@ app = flask.Flask(__name__)
 
 @app.route("/")
 def front():
-    return "<h1>Hello from Flask</h1>"
+    return flask.redirect("/static/park.html")
 
 @app.route("/park", methods = [ "GET" ])
 def park():
