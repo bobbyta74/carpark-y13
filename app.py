@@ -1,4 +1,4 @@
-#Mr Cressey's carpark part 3
+#Mr Cressey's car park
 import flask, sqlite3, time
 
 #Startup - create 
@@ -43,6 +43,7 @@ def park():
         """, [ reg, entry ])
         connection.commit()
         return {
+            "reg" : reg,
             "type" : "entry",
             "time" : entry
         }
@@ -54,6 +55,7 @@ def park():
         """, [ reg ])
         connection.commit()
         return {
+            "reg" : reg,
             "type" : "exit",
             "duration" : timedelta
         }
